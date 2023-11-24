@@ -1,0 +1,42 @@
+name: authentication_app
+description: A new Flutter project that implements the Authentication System of a Mobile Aplication.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.6 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  google_fonts: ^6.1.0
+  get: ^4.6.5
+  liquid_swipe: ^3.1.0
+  smooth_page_indicator: ^1.1.0
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter_native_splash:
+  color: "#F7F6F1"
+  color_dark: "#272727"
+
+  android_12:
+    icon_background_color: "#F7F6F1"
+    icon_background_color_dark: "#272727"
+
+  web: false
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
