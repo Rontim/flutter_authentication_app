@@ -1,5 +1,4 @@
 import 'package:authentication_app/src/features/authentication/screens/on_boarding/on_boarding_screen.dart';
-import 'package:authentication_app/src/features/authentication/screens/welcome/welcome.dart';
 
 import 'package:get/get.dart';
 
