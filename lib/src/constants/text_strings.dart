@@ -57,4 +57,14 @@ const String tForgotPasswordPhone = 'Reset via Phone Number.';
 /* - Forget Password Mail Screen Text Strings -- */
 const String tForgetPassword = 'Forget Password';
 const String tForgetPasswordSubTitle =
-    'Please enter your email address to reset password.';
+    'Please enter your registered E-Mail to receive OTP.';
+
+/* - Forget Password Phone Screen Text Strings -- */
+const String tForgetPasswordPhone = 'Forget Password';
+const String tForgetPasswordPhoneSubTitle =
+    'Please enter your registered Phone No to receive OTP.';
+
+/* - OTP Screen Text Strings -- */
+const String tOtpTitle = 'CO\nDE';
+const String tOtpSubTitle = 'Verification';
+const String tOtpMessage = 'Please enter the verification code sent to ';

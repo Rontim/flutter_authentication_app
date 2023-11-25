@@ -1,6 +1,5 @@
-import 'package:authentication_app/src/common_widgets/fade_in_animation/animation_design.dart';
 import 'package:authentication_app/src/common_widgets/fade_in_animation/fade_in_animation_controller.dart';
-import 'package:authentication_app/src/common_widgets/fade_in_animation/fade_in_animation_model.dart';
+
 import 'package:authentication_app/src/constants/colors.dart';
 import 'package:authentication_app/src/constants/image_strings.dart';
 import 'package:authentication_app/src/constants/sizes.dart';
@@ -70,7 +69,11 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       const SizedBox(width: 10.0),
                       Expanded(
                         child: ElevatedButton(
-                          onPressed: () => Get.to(() => const SignUpScreen()),
+                          onPressed: () => Get.to(
+                            () => const SignUpScreen(),
+                            duration: const Duration(milliseconds: 1000),
+                            transition: Transition.rightToLeftWithFade,
+                          ),
                           style: Theme.of(context).elevatedButtonTheme.style,
                           child: Text(tSignUp.toUpperCase()),
                         ),

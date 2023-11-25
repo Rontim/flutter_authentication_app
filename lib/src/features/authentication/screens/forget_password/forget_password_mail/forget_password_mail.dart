@@ -2,7 +2,9 @@ import 'package:authentication_app/src/common_widgets/fade_in_animation/form/for
 import 'package:authentication_app/src/constants/image_strings.dart';
 import 'package:authentication_app/src/constants/sizes.dart';
 import 'package:authentication_app/src/constants/text_strings.dart';
+import 'package:authentication_app/src/features/authentication/screens/forget_password/forget_password_otp/otp_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ForgetPasswordMailScreen extends StatelessWidget {
   const ForgetPasswordMailScreen({super.key});
@@ -17,9 +19,9 @@ class ForgetPasswordMailScreen extends StatelessWidget {
             child: Column(
               children: [
                 const SizedBox(height: tDefaultSize * 4),
-                FormHeader(
+                const FormHeader(
                   image: tForgetPasswordImage,
-                  title: tForgetPassword.toUpperCase(),
+                  title: tForgetPassword,
                   subTitle: tForgetPasswordSubTitle,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   heightBetween: 30.0,
@@ -40,7 +42,9 @@ class ForgetPasswordMailScreen extends StatelessWidget {
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.to(() => const OTPScreen());
+                        },
                         child: const Text('Next'),
                       ),
                     ),
