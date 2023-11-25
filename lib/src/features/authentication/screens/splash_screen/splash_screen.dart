@@ -1,71 +1,73 @@
+import 'package:authentication_app/src/common_widgets/fade_in_animation/animation_design.dart';
+import 'package:authentication_app/src/common_widgets/fade_in_animation/fade_in_animation_controller.dart';
+import 'package:authentication_app/src/common_widgets/fade_in_animation/fade_in_animation_model.dart';
 import 'package:authentication_app/src/constants/colors.dart';
 import 'package:authentication_app/src/constants/image_strings.dart';
 import 'package:authentication_app/src/constants/sizes.dart';
 import 'package:authentication_app/src/constants/text_strings.dart';
-import 'package:authentication_app/src/features/authentication/controller/splash_screen_constroller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class SplashScreen extends StatelessWidget {
-  SplashScreen({super.key});
-
-  final splashScreenController = Get.put(SplashScreenController());
+  const SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    splashScreenController.startAnimation();
+    final controller = Get.put(FadeInAnimationController());
+    controller.startSplashAnimation();
 
     return Scaffold(
       body: Stack(
         children: [
-          Obx(
-            () => AnimatedPositioned(
-              duration: const Duration(milliseconds: 1600),
-              top: splashScreenController.animate.value ? 0 : -30,
-              left: splashScreenController.animate.value ? 0 : -30,
-              child: AnimatedOpacity(
-                duration: const Duration(milliseconds: 1600),
-                opacity: splashScreenController.animate.value ? 1 : 0,
-                child: const Image(image: AssetImage(tSplashTopIcon)),
-              ),
+          TFadeInAnimation(
+            durationInMs: 1600,
+            animate: TAnimatePosition(
+              topBefore: -30,
+              topAfter: 0,
+            ),
+            child: const Image(
+              image: AssetImage(tSplashTopIcon),
             ),
           ),
-          Obx(
-            () => AnimatedPositioned(
-              duration: const Duration(milliseconds: 2000),
-              top: 80,
-              left: splashScreenController.animate.value ? tDefaultSize : -80,
-              child: AnimatedOpacity(
-                duration: const Duration(milliseconds: 2000),
-                opacity: splashScreenController.animate.value ? 1 : 0,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(tAppName,
-                        style: Theme.of(context).textTheme.displaySmall),
-                    Text(tAppTagLine,
-                        style: Theme.of(context).textTheme.titleSmall)
-                  ],
-                ),
-              ),
+          TFadeInAnimation(
+            durationInMs: 2000,
+            animate: TAnimatePosition(
+              topBefore: 80,
+              topAfter: 80,
+              leftBefore: -80,
+              leftAfter: tDefaultSize,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(tAppName, style: Theme.of(context).textTheme.displaySmall),
+                Text(tAppTagLine, style: Theme.of(context).textTheme.bodyLarge)
+              ],
             ),
           ),
-          Obx(
-            () => AnimatedPositioned(
-              duration: const Duration(milliseconds: 2400),
-              bottom: splashScreenController.animate.value ? 60 : 0,
-              right: tDefaultSize,
-              child: AnimatedOpacity(
-                duration: const Duration(milliseconds: 2000),
-                opacity: splashScreenController.animate.value ? 1 : 0,
-                child: Container(
-                  width: tSplashContainerSize,
-                  height: tSplashContainerSize,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(100),
-                    color: tPrimaryColor,
-                  ),
-                ),
+          TFadeInAnimation(
+            durationInMs: 2400,
+            animate: TAnimatePosition(bottomBefore: 0, bottomAfter: 100),
+            child: Image(
+              image: const AssetImage(tSplashImage),
+              width: MediaQuery.of(context).size.width * 0.9,
+              height: MediaQuery.of(context).size.height * 0.7,
+            ),
+          ),
+          TFadeInAnimation(
+            durationInMs: 2400,
+            animate: TAnimatePosition(
+              bottomBefore: 0,
+              bottomAfter: 60,
+              rightBefore: tDefaultSize,
+              rightAfter: tDefaultSize,
+            ),
+            child: Container(
+              width: tSplashContainerSize,
+              height: tSplashContainerSize,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(100),
+                color: tPrimaryColor,
               ),
             ),
           ),
