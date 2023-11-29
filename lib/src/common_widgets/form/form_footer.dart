@@ -1,8 +1,5 @@
-import 'package:authentication_app/src/constants/image_strings.dart';
 import 'package:authentication_app/src/constants/sizes.dart';
-import 'package:authentication_app/src/constants/text_strings.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class FormFooter extends StatelessWidget {
   const FormFooter({

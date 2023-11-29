@@ -10,3 +10,10 @@ const String tGoogleIcon = 'assets/images/google_icon.png';
 
 /* -- Forget Password Image Strings -- */
 const String tForgetPasswordImage = 'assets/images/reset_password.png';
+
+/* -- Dashboard Image Strings -- */
+const String tUserProfileImage = 'assets/images/user_profile_icon.png';
+const String tBookMarkImage = 'assets/images/bookmark_icon.png';
+const String tDashboardBannerImage = 'assets/images/movie_icon.png';
+const String tDashboardBannerImage1 = 'assets/images/tvshow_icon.png';
+const String tDashboardLatestImage = 'assets/images/popcorn_icon.png';

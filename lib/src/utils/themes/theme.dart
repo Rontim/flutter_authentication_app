@@ -8,7 +8,7 @@ class TAppTheme {
   TAppTheme._();
 
   static ThemeData lightTheme = ThemeData(
-    primarySwatch: Colors.yellow,
+    primarySwatch: Colors.deepPurple,
     brightness: Brightness.light,
     textTheme: TTextTheme.lightTextTheme,
     outlinedButtonTheme: TOutLinedButtonTheme.lightOutLinedButtonTheme,
@@ -17,7 +17,6 @@ class TAppTheme {
   );
 
   static ThemeData darkTheme = ThemeData(
-    primarySwatch: Colors.yellow,
     brightness: Brightness.dark,
     textTheme: TTextTheme.darkTextTheme,
     outlinedButtonTheme: TOutLinedButtonTheme.darkOutLinedButtonTheme,

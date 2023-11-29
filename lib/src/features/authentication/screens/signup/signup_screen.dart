@@ -1,5 +1,5 @@
-import 'package:authentication_app/src/common_widgets/fade_in_animation/form/form_footer.dart';
-import 'package:authentication_app/src/common_widgets/fade_in_animation/form/form_header.dart';
+import 'package:authentication_app/src/common_widgets/form/form_footer.dart';
+import 'package:authentication_app/src/common_widgets/form/form_header.dart';
 import 'package:authentication_app/src/constants/image_strings.dart';
 import 'package:authentication_app/src/constants/sizes.dart';
 import 'package:authentication_app/src/constants/text_strings.dart';
@@ -13,7 +13,6 @@ class SignUpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(

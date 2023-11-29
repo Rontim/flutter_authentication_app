@@ -68,3 +68,13 @@ const String tForgetPasswordPhoneSubTitle =
 const String tOtpTitle = 'CO\nDE';
 const String tOtpSubTitle = 'Verification';
 const String tOtpMessage = 'Please enter the verification code sent to ';
+
+/* - Dashboard Screen Text Strings -- */
+const String tDashboardTitle = "Hey, Welcome Back 👋";
+const String tDashboardHeading = "What would you like to watch today?";
+const String tDashboardSearch = "Search...";
+const String tDashboardBannerTitle1 = "Extraction2";
+const String tDashboardBannerTitle2 = "You Should Have Left";
+const String tDashboardBannerSubTitle = "Watch Now";
+const String tDashboardButton = "View All";
+const String tDashboardLatest = "Latest Additions";

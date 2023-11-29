@@ -1,7 +1,9 @@
 import 'package:authentication_app/src/constants/sizes.dart';
 import 'package:authentication_app/src/constants/text_strings.dart';
+import 'package:authentication_app/src/features/authentication/controller/otp_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class OTPScreen extends StatelessWidget {
@@ -9,6 +11,10 @@ class OTPScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String otp = '';
+
+    final otpController = Get.put(OTPController());
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
@@ -30,7 +36,7 @@ class OTPScreen extends StatelessWidget {
               ),
               const SizedBox(height: tDefaultSize + 10.0),
               const Text(
-                "$tOtpMessage test@example.com",
+                '$tOtpMessage test@example.com',
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: tDefaultSize - 10.0),
@@ -38,18 +44,18 @@ class OTPScreen extends StatelessWidget {
                 numberOfFields: 6,
                 filled: true,
                 fillColor: Colors.black.withOpacity(0.2),
-                onCodeChanged: (code) {
-                  print('Code is $code');
-                },
-                onSubmit: (verificationCode) {
-                  print('Verification Code is $verificationCode');
+                onSubmit: (code) {
+                  otp = code;
+                  OTPController.instance.verifyOtp(otp);
                 },
               ),
               const SizedBox(height: tDefaultSize - 10),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    OTPController.instance.verifyOtp(otp);
+                  },
                   child: const Text('Next'),
                 ),
               ),

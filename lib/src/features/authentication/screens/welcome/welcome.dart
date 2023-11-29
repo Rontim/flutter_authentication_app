@@ -61,7 +61,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     Row(children: [
                       Expanded(
                         child: OutlinedButton(
-                          onPressed: () => Get.to(() => const LoginScreen()),
+                          onPressed: () => {
+                            controller.animationOut(),
+                            Get.to(() => const LoginScreen())
+                          },
                           style: Theme.of(context).outlinedButtonTheme.style,
                           child: Text(tLogin.toUpperCase()),
                         ),
@@ -69,11 +72,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       const SizedBox(width: 10.0),
                       Expanded(
                         child: ElevatedButton(
-                          onPressed: () => Get.to(
-                            () => const SignUpScreen(),
-                            duration: const Duration(milliseconds: 1000),
-                            transition: Transition.rightToLeftWithFade,
-                          ),
+                          onPressed: () => {
+                            controller.animationOut(),
+                            Get.to(
+                              () => const SignUpScreen(),
+                              duration: const Duration(milliseconds: 1000),
+                              transition: Transition.rightToLeftWithFade,
+                            )
+                          },
                           style: Theme.of(context).elevatedButtonTheme.style,
                           child: Text(tSignUp.toUpperCase()),
                         ),
