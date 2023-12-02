@@ -13,6 +13,7 @@ class OTPScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     String otp = '';
 
+    // ignore: unused_local_variable
     final otpController = Get.put(OTPController());
 
     return Scaffold(

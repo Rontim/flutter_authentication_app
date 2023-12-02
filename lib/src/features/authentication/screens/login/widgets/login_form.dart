@@ -13,6 +13,7 @@ class LoginForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final loginController = Get.put(LoginController());
+    // ignore: unused_local_variable
     final formKey = GlobalKey<FormState>();
 
     return Form(
