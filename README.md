@@ -1,16 +1,57 @@
-# authentication_app
+# My Auth Flutter App
 
-A new Flutter project.
+My Auth is a Flutter application that implements user authentication using Firebase. It provides features for email/password authentication and phone number verification. The app also utilizes GetX for efficient state management and Firestore for storing user details.
+
+## Table of Contents
+
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Configuration](#configuration)
+  - [Firebase Setup](#firebase-setup)
+
+## Features
+
+- Email/password authentication
+- Phone number verification
+- State management with GetX
+- User details stored in Firestore
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Prerequisites
 
-A few resources to get you started if this is your first Flutter project:
+Make sure you have the following installed:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Flutter: [Install Flutter](https://flutter.dev/docs/get-started/install)
+- Dart: [Install Dart](https://dart.dev/get-dart)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+    git clone https://github.com/your-username/my-auth.git
+    ```
+
+2. Navigate to the cloned repository:
+
+   ```bash
+    cd my-auth
+    ```
+
+3. Install the dependencies:
+
+   ```bash
+    flutter pub get
+    ```
+
+## Configuration
+
+### Firebase Setup
+
+1. Create a new project on the Firebase Console.
+2. Add your Android and iOS apps to the Firebase project.
+3. Download the google-services.json file for Android and GoogleService-Info.plist file for iOS.
+4. Place the files in the respective directories (android/app for Android and ios for iOS) in your Flutter project.
