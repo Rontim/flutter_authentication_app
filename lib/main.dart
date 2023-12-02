@@ -1,4 +1,5 @@
 import 'package:authentication_app/firebase_options.dart';
+import 'package:authentication_app/src/constants/colors.dart';
 import 'package:authentication_app/src/repository/authentication_repository/authentication_repository.dart';
 import 'package:authentication_app/src/utils/themes/theme.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -25,7 +26,11 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       defaultTransition: Transition.leftToRightWithFade,
       transitionDuration: const Duration(milliseconds: 1000),
-      home: const LinearProgressIndicator(),
+      home: const Center(
+        child: CircularProgressIndicator(
+          color: tPrimaryColor,
+        ),
+      ),
     );
   }
 }

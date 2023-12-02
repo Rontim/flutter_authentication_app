@@ -1,4 +1,7 @@
+import 'package:authentication_app/src/features/authentication/model/user_model.dart';
+import 'package:authentication_app/src/features/authentication/screens/forget_password/forget_password_otp/otp_screen.dart';
 import 'package:authentication_app/src/repository/authentication_repository/authentication_repository.dart';
+import 'package:authentication_app/src/repository/user_repository/user_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -10,6 +13,8 @@ class SignUpController extends GetxController {
   final name = TextEditingController();
   final phone = TextEditingController();
 
+  final userRepo = Get.put(UserRepository());
+
   void registerUser(String email, String password) {
     String? error = AuthenticationRepository.instance
         .createUserWithEmailAndPassword(email, password) as String?;
@@ -18,6 +23,11 @@ class SignUpController extends GetxController {
         message: error.toString(),
       ));
     }
+  }
+
+  Future<void> createUser(UserModel user) async {
+    await userRepo.createUser(user);
+    registerUser(user.email, user.password);
   }
 
   void phoneAuthentication(String phoneNo) {

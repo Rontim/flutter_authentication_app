@@ -1,7 +1,8 @@
 import 'package:authentication_app/src/constants/colors.dart';
 import 'package:authentication_app/src/constants/image_strings.dart';
-import 'package:authentication_app/src/repository/authentication_repository/authentication_repository.dart';
+import 'package:authentication_app/src/features/core/screens/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class DashBoardAppBar extends StatelessWidget implements PreferredSizeWidget {
   const DashBoardAppBar({super.key});
@@ -36,7 +37,7 @@ class DashBoardAppBar extends StatelessWidget implements PreferredSizeWidget {
               ),
             ),
             onPressed: () {
-              AuthenticationRepository.instance.logOut();
+              Get.to(() => const ProfileScreen());
             },
           ),
         )

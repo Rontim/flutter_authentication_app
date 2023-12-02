@@ -17,3 +17,6 @@ const String tBookMarkImage = 'assets/images/bookmark_icon.png';
 const String tDashboardBannerImage = 'assets/images/movie_icon.png';
 const String tDashboardBannerImage1 = 'assets/images/tvshow_icon.png';
 const String tDashboardLatestImage = 'assets/images/popcorn_icon.png';
+
+/* -- Profile Image Strings -- */
+const String tProfileImage = 'assets/images/profile_photo.jpg';

@@ -51,7 +51,7 @@ class OnBoardScreen extends StatelessWidget {
           child: TextButton(
             onPressed: () => obController.skip(),
             child: const Text(
-              "Skip",
+              'Skip',
               style: TextStyle(color: Colors.grey),
             ),
           ),

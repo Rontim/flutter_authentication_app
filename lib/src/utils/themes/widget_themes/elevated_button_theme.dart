@@ -11,7 +11,7 @@ class TElevatedButtonTheme {
     style: ElevatedButton.styleFrom(
       elevation: 0,
       shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(Radius.circular(10.0)),
+        borderRadius: BorderRadius.all(Radius.circular(100)),
       ),
       foregroundColor: tWhiteColor,
       backgroundColor: tSecondaryColor,
@@ -26,7 +26,7 @@ class TElevatedButtonTheme {
     style: ElevatedButton.styleFrom(
       elevation: 0,
       shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(Radius.circular(10.0)),
+        borderRadius: BorderRadius.all(Radius.circular(100)),
       ),
       foregroundColor: tSecondaryColor,
       backgroundColor: tWhiteColor,

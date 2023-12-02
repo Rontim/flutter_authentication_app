@@ -1,6 +1,7 @@
 import 'package:authentication_app/src/constants/sizes.dart';
 import 'package:authentication_app/src/constants/text_strings.dart';
 import 'package:authentication_app/src/features/authentication/controller/signup_controller.dart';
+import 'package:authentication_app/src/features/authentication/model/user_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -58,9 +59,14 @@ class SignUpForm extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
-                    SignUpController.instance.registerUser(
-                        controller.email.text.trim(),
-                        controller.password.text.trim());
+                    final user = UserModel(
+                      email: controller.email.text.trim(),
+                      fullName: controller.name.text.trim(),
+                      phoneNo: controller.phone.text.trim(),
+                      password: controller.password.text.trim(),
+                    );
+
+                    SignUpController.instance.createUser(user);
                   }
                 },
                 child: Text(tSignUpButton.toUpperCase()),

@@ -22,23 +22,20 @@ class LoginForm extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TextFormField(
-              decoration: InputDecoration(
-                  prefixIcon: const Icon(Icons.mail_outline_rounded),
-                  labelText: tLoginEmail,
-                  hintText: tLoginEmail,
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10))),
+              decoration: const InputDecoration(
+                prefixIcon: Icon(Icons.mail_outline_rounded),
+                labelText: tLoginEmail,
+                hintText: tLoginEmail,
+              ),
               controller: loginController.email,
             ),
             const SizedBox(height: tDefaultSize - 20),
             TextFormField(
-              decoration: InputDecoration(
-                  prefixIcon: const Icon(Icons.lock),
+              decoration: const InputDecoration(
+                  prefixIcon: Icon(Icons.lock),
                   labelText: tLoginPassword,
                   hintText: tLoginPassword,
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  suffixIcon: const IconButton(
+                  suffixIcon: IconButton(
                       onPressed: null, icon: Icon(Icons.remove_red_eye_sharp))),
               controller: loginController.password,
             ),
@@ -58,11 +55,9 @@ class LoginForm extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                   onPressed: () {
-                    if (formKey.currentState!.validate()) {
-                      LoginController.instance.loginUser(
-                          loginController.email.text.trim(),
-                          loginController.password.text.trim());
-                    }
+                    LoginController.instance.loginUser(
+                        loginController.email.text.trim(),
+                        loginController.password.text.trim());
                   },
                   style: Theme.of(context).elevatedButtonTheme.style,
                   child: Text(tLoginButton.toUpperCase())),

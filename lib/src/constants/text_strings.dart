@@ -1,24 +1,28 @@
 /* - App Text Strings -- */
-const String tAppName = "Auth App";
-const String tAppTagLine = "Built with\nFlutter & Firebase";
+const String tAppName = 'Auth App';
+const String tAppTagLine = 'Built with\nFlutter & Firebase';
 
 /* - Generic Text Strings -- */
-const String tLogin = "Login";
-const String tSignUp = "Sign Up";
+const String tLogin = 'Login';
+const String tSignUp = 'Sign Up';
+const String tFullName = 'Full Name';
+const String tEmail = 'Email';
+const String tPhoneNo = 'Phone No';
+const String tPassword = 'Password';
 
 /* - Splash Screen Text Strings -- */
-const String tOnBoardingTitle1 = "Build Awesome Apps";
-const String tOnBoardingTitle2 = "Learn from YouTube";
-const String tOnBoardingTitle3 = "Get Code & Resources";
+const String tOnBoardingTitle1 = 'Build Awesome Apps';
+const String tOnBoardingTitle2 = 'Learn from YouTube';
+const String tOnBoardingTitle3 = 'Get Code & Resources';
 const String tOnBoardingSubTitle1 =
     "Let's start your journey with us on this amazing and easy";
 const String tOnBoardingSubTitle2 =
-    "Get Video Tutorials of each topic to learn things easily.";
+    'Get Video Tutorials of each topic to learn things easily.';
 const String tOnBoardingSubTitle3 =
-    "Save time by just copy pasting complete apps learn from vi";
-const String tOnBoardingCounter1 = "1/3";
-const String tOnBoardingCounter2 = "2/3";
-const String tOnBoardingCounter3 = "3/3";
+    'Save time by just copy pasting complete apps learn from vi';
+const String tOnBoardingCounter1 = '1/3';
+const String tOnBoardingCounter2 = '2/3';
+const String tOnBoardingCounter3 = '3/3';
 
 /* - Welcome Screen Text Strings -- */
 const String tWelcomeTitle = 'My Auth App';
@@ -45,7 +49,7 @@ const String tSignUpPassword = 'Password';
 const String tSignUpPhone = 'Phone';
 const String tSignUpButton = 'Sign Up';
 const String tSignUpSignIn = 'Sign In';
-const String tAlreadyHaveAccount = "Already have an account? ";
+const String tAlreadyHaveAccount = 'Already have an account? ';
 
 /* - Forgot Password Modal Text Strings -- */
 const String tForgotPasswordTitle = 'Make a selection!';
@@ -70,11 +74,30 @@ const String tOtpSubTitle = 'Verification';
 const String tOtpMessage = 'Please enter the verification code sent to ';
 
 /* - Dashboard Screen Text Strings -- */
-const String tDashboardTitle = "Hey, Welcome Back 👋";
-const String tDashboardHeading = "What would you like to watch today?";
-const String tDashboardSearch = "Search...";
-const String tDashboardBannerTitle1 = "Extraction2";
-const String tDashboardBannerTitle2 = "You Should Have Left";
-const String tDashboardBannerSubTitle = "Watch Now";
-const String tDashboardButton = "View All";
-const String tDashboardLatest = "Latest Additions";
+const String tDashboardTitle = 'Hey, Welcome Back 👋';
+const String tDashboardHeading = 'What would you like to watch today?';
+const String tDashboardSearch = 'Search...';
+const String tDashboardBannerTitle1 = 'Extraction2';
+const String tDashboardBannerTitle2 = 'You Should Have Left';
+const String tDashboardBannerSubTitle = 'Watch Now';
+const String tDashboardButton = 'View All';
+const String tDashboardLatest = 'Latest Additions';
+
+/* - Profile Screen Text Strings -- */
+const String tProfile = 'Profile';
+const String tEditProfile = 'Edit Profile';
+const String tLogoutDialogHeading = 'Logout';
+const String tProfileHeading = 'Coding with T';
+const String tProfileSubHeading = 'superAdmin@codingwitht.com';
+
+/* - Profile Screen - Text */
+const String tMenu5 = 'Logout';
+const String tMenu1 = 'Settings';
+const String tMenu4 = 'Information';
+const String tMenu2 = 'Billing Details';
+const String tMenu3 = 'User Management';
+
+/* - Settings Screen - Text */
+const String tDelete = 'Delete';
+const String tJoined = 'Joined';
+const String tJoinedAt = ' 31 October 2022';
