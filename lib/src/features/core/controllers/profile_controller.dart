@@ -1,3 +1,4 @@
+import 'package:authentication_app/src/features/authentication/model/user_model.dart';
 import 'package:authentication_app/src/repository/authentication_repository/authentication_repository.dart';
 import 'package:authentication_app/src/repository/user_repository/user_repository.dart';
 import 'package:get/get.dart';
@@ -8,7 +9,7 @@ class ProfileController extends GetxController {
   final _authRepo = Get.find<AuthenticationRepository>();
   final _userRepo = Get.find<UserRepository>();
 
-  getUserDetails() {
+  getUserDetails() async {
     final email = _authRepo.firebaseUser.value?.email;
 
     if (email != null) {
@@ -16,5 +17,13 @@ class ProfileController extends GetxController {
     } else {
       Get.snackbar('Error', 'Login to get user details');
     }
+  }
+
+  Future<List<UserModel>> getUsers() async {
+    return await _userRepo.getUsers();
+  }
+
+  updateUser(UserModel user) async {
+    await _userRepo.updateUser(user);
   }
 }

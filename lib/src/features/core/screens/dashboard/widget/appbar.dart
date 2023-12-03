@@ -9,8 +9,6 @@ class DashBoardAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-
     return AppBar(
       leading: const Icon(Icons.menu, color: Colors.black),
       title: Text(
